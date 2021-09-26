@@ -11,7 +11,7 @@
 
 
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <meta name="author" content="AJiang">
     <meta name="renderer" content="webkit">
@@ -20,24 +20,17 @@
     <meta name="keywords" content="AJiang's Blog,AJiang">
     
     <meta name="description" content="">
-    <meta name="description" content="题号 题目 知识点    JZ1 二维数组中的查找 数组   JZ2 替换空格 字符串   JZ3 从尾到头打印链表 链表   JZ4 重建二叉树 数组 树 dfs   JZ5 用两个栈实现队列 栈   JZ6 旋转数组的最小数字 二分   JZ7 斐波那契数列 数组   JZ8 跳台阶 递归   JZ9 跳台阶扩展问题 递归 动态规划   JZ10 矩形覆盖 递归 动态规划   JZ11">
-<meta property="og:type" content="article">
-<meta property="og:title" content="《剑指Offer》的Go语言实现">
-<meta property="og:url" content="https://ajiang0704.github.io/2021/09/06/6-JZ0/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="AJiang&#39;s Blog">
+<meta property="og:url" content="https://ajiang0704.github.io/tags/%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="AJiang&#39;s Blog">
-<meta property="og:description" content="题号 题目 知识点    JZ1 二维数组中的查找 数组   JZ2 替换空格 字符串   JZ3 从尾到头打印链表 链表   JZ4 重建二叉树 数组 树 dfs   JZ5 用两个栈实现队列 栈   JZ6 旋转数组的最小数字 二分   JZ7 斐波那契数列 数组   JZ8 跳台阶 递归   JZ9 跳台阶扩展问题 递归 动态规划   JZ10 矩形覆盖 递归 动态规划   JZ11">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-09-06T13:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-10T07:52:01.449Z">
 <meta property="article:author" content="AJiang">
-<meta property="article:tag" content="Golang">
-<meta property="article:tag" content="Go语言">
-<meta property="article:tag" content="剑指Offer">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>《剑指Offer》的Go语言实现 · AJiang&#39;s Blog</title>
+    <title>AJiang&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -215,27 +208,16 @@
     
     <!-- 谷歌统计  -->
     
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="AJiang's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="AJiang's Blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-dracula.css" type="text/css"></head>
 
     
-        <body class="post-body">
     
-    
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >AJiang&#39;s Blog</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">《剑指Offer》的Go语言实现</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>AJiang's Blog</a>
 </header>
@@ -247,69 +229,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            《剑指Offer》的Go语言实现
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Golang">Golang</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Go语言">Go语言</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "剑指Offer">剑指Offer</a>
-    
-</div>
-                
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2021/09/06</span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -410,395 +347,48 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <table>
-<thead>
-<tr>
-<th align="center">题号</th>
-<th align="center">题目</th>
-<th align="center">知识点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">JZ1</td>
-<td align="center"><a href="/2021/09/06/7-JZ1">二维数组中的查找</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ2</td>
-<td align="center"><a href="/2021/09/06/8-JZ2">替换空格</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ3</td>
-<td align="center"><a href="/404.html">从尾到头打印链表</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ4</td>
-<td align="center"><a href="/404.html">重建二叉树</a></td>
-<td align="center"><code>数组</code> <code>树</code> <code>dfs</code></td>
-</tr>
-<tr>
-<td align="center">JZ5</td>
-<td align="center"><a href="/404.html">用两个栈实现队列</a></td>
-<td align="center"><code>栈</code></td>
-</tr>
-<tr>
-<td align="center">JZ6</td>
-<td align="center"><a href="/404.html">旋转数组的最小数字</a></td>
-<td align="center"><code>二分</code></td>
-</tr>
-<tr>
-<td align="center">JZ7</td>
-<td align="center"><a href="/404.html">斐波那契数列</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ8</td>
-<td align="center"><a href="/404.html">跳台阶</a></td>
-<td align="center"><code>递归</code></td>
-</tr>
-<tr>
-<td align="center">JZ9</td>
-<td align="center"><a href="/404.html">跳台阶扩展问题</a></td>
-<td align="center"><code>递归</code> <code>动态规划</code></td>
-</tr>
-<tr>
-<td align="center">JZ10</td>
-<td align="center"><a href="/404.html">矩形覆盖</a></td>
-<td align="center"><code>递归</code> <code>动态规划</code></td>
-</tr>
-<tr>
-<td align="center">JZ11</td>
-<td align="center"><a href="/404.html">二进制中1的个数    </a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ12</td>
-<td align="center"><a href="/404.html">数值的整数次方</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ13</td>
-<td align="center"><a href="/404.html">调整数组顺序使奇数位于偶数前面</a></td>
-<td align="center"><code>数组    </code></td>
-</tr>
-<tr>
-<td align="center">JZ14</td>
-<td align="center"><a href="/404.html">链表中倒数最后k个结点</a></td>
-<td align="center"><code>链表    </code></td>
-</tr>
-<tr>
-<td align="center">JZ15</td>
-<td align="center"><a href="/404.html">反转链表</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ16</td>
-<td align="center"><a href="/404.html">合并两个排序的链表</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ17</td>
-<td align="center"><a href="/404.html">树的子结构</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ18</td>
-<td align="center"><a href="/404.html">二叉树的镜像</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ19</td>
-<td align="center"><a href="/404.html">顺时针打印矩阵</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ20</td>
-<td align="center"><a href="/404.html">包含min函数的栈</a></td>
-<td align="center"><code>栈</code></td>
-</tr>
-<tr>
-<td align="center">JZ21</td>
-<td align="center"><a href="404.html">栈的压入、弹出序列</a></td>
-<td align="center"><code>栈</code></td>
-</tr>
-<tr>
-<td align="center">JZ22</td>
-<td align="center"><a href="404.html">从上往下打印二叉树</a></td>
-<td align="center"><code>队列</code> <code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ23</td>
-<td align="center"><a href="/404.html">二叉搜索树的后序遍历序列</a></td>
-<td align="center"><code>栈</code> <code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ24</td>
-<td align="center"><a href="/404.html">二叉树中和为某一值的路径    </a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ25</td>
-<td align="center"><a href="/404.html">复杂链表的复制</a></td>
-<td align="center"><code>链表    </code></td>
-</tr>
-<tr>
-<td align="center">JZ26</td>
-<td align="center"><a href="/404.html">二叉搜索树与双向链表</a></td>
-<td align="center"><code>分治</code></td>
-</tr>
-<tr>
-<td align="center">JZ27</td>
-<td align="center"><a href="/404.html">字符串的排列</a></td>
-<td align="center"><code>字符串</code> <code>动态规划</code></td>
-</tr>
-<tr>
-<td align="center">JZ28</td>
-<td align="center"><a href="/404.html">数组中出现次数超过一半的数字</a></td>
-<td align="center"><code>数组</code> <code>哈希</code></td>
-</tr>
-<tr>
-<td align="center">JZ29</td>
-<td align="center"><a href="/404.html">最小的K个数</a></td>
-<td align="center"><code>堆</code> <code>排序</code> <code>分治</code></td>
-</tr>
-<tr>
-<td align="center">JZ30</td>
-<td align="center"><a href="/404.html">连续子数组的最大和</a></td>
-<td align="center"><code>动态规划</code> <code>分治</code></td>
-</tr>
-<tr>
-<td align="center">JZ31</td>
-<td align="center"><a href="/404.html">整数中1出现的次数(从1到n整数中1出现的次数)</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ32</td>
-<td align="center"><a href="/404.html">把数组排成最小的数</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ33</td>
-<td align="center"><a href="/404.html">丑数</a></td>
-<td align="center"><code>数学</code> <code>二分</code></td>
-</tr>
-<tr>
-<td align="center">JZ34</td>
-<td align="center"><a href="/404.html">第一个只出现一次的字符位置</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ35</td>
-<td align="center"><a href="/404.html">数组中的逆序对</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ36</td>
-<td align="center"><a href="/404.html">两个链表的第一个公共结点</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ37</td>
-<td align="center"><a href="/404.html">数字在排序数组中出现的次数</a></td>
-<td align="center"><code>数组</code> <code>二分</code></td>
-</tr>
-<tr>
-<td align="center">JZ38</td>
-<td align="center"><a href="/404.html">二叉树的深度</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ39</td>
-<td align="center"><a href="/404.html">平衡二叉树</a></td>
-<td align="center"><code>树</code> <code>dfs</code></td>
-</tr>
-<tr>
-<td align="center">JZ40</td>
-<td align="center"><a href="/404.html">数组中只出现一次的数字</a></td>
-<td align="center"><code>哈希</code> <code>位运算</code></td>
-</tr>
-<tr>
-<td align="center">JZ41</td>
-<td align="center"><a href="/404.html">和为S的连续正数序列</a></td>
-<td align="center"><code>穷举</code></td>
-</tr>
-<tr>
-<td align="center">JZ42</td>
-<td align="center"><a href="/404.html">和为S的两个数字</a></td>
-<td align="center"><code>数组</code> <code>双指针</code></td>
-</tr>
-<tr>
-<td align="center">JZ43</td>
-<td align="center"><a href="/404.html">左旋转字符串</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ44</td>
-<td align="center"><a href="/404.html">翻转单词序列</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ45</td>
-<td align="center"><a href="/404.html">扑克牌顺子</a></td>
-<td align="center"><code>模拟</code></td>
-</tr>
-<tr>
-<td align="center">JZ46</td>
-<td align="center"><a href="/404.html">孩子们的游戏(圆圈中最后剩下的数)</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ47</td>
-<td align="center"><a href="/404.html">求1+2+3+…+n</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ48</td>
-<td align="center"><a href="/404.html">不用加减乘除做加法</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ49</td>
-<td align="center"><a href="/404.html">把字符串转换成整数</a></td>
-<td align="center"><code>字符串</code> <code>数学</code></td>
-</tr>
-<tr>
-<td align="center">JZ50</td>
-<td align="center"><a href="/404.html">数组中重复的数字</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ51</td>
-<td align="center"><a href="/404.html">构建乘积数组</a></td>
-<td align="center"><code>数组</code></td>
-</tr>
-<tr>
-<td align="center">JZ52</td>
-<td align="center"><a href="/404.html">正则表达式匹配</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ53</td>
-<td align="center"><a href="/404.html">表示数值的字符串</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ54</td>
-<td align="center"><a href="/404.html">字符流中第一个不重复的字符</a></td>
-<td align="center"><code>字符串</code></td>
-</tr>
-<tr>
-<td align="center">JZ55</td>
-<td align="center"><a href="/404.html">链表中环的入口结点</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ56</td>
-<td align="center"><a href="/404.html">删除链表中重复的结点</a></td>
-<td align="center"><code>链表</code></td>
-</tr>
-<tr>
-<td align="center">JZ57</td>
-<td align="center"><a href="/404.html">二叉树的下一个结点</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ58</td>
-<td align="center"><a href="/404.html">对称的二叉树</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ59</td>
-<td align="center"><a href="/404.html">按之字形顺序打印二叉树</a></td>
-<td align="center"><code>栈</code> <code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ60</td>
-<td align="center"><a href="/404.html">把二叉树打印成多行</a></td>
-<td align="center"><code>树</code> <code>bfs</code></td>
-</tr>
-<tr>
-<td align="center">JZ61</td>
-<td align="center"><a href="/404.html">序列化二叉树</a></td>
-<td align="center"><code>队列</code> <code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ62</td>
-<td align="center"><a href="/404.html">二叉搜索树的第k个结点</a></td>
-<td align="center"><code>树</code></td>
-</tr>
-<tr>
-<td align="center">JZ63</td>
-<td align="center"><a href="/404.html">数据流中的中位数</a></td>
-<td align="center"><code>堆</code> <code>排序</code></td>
-</tr>
-<tr>
-<td align="center">JZ64</td>
-<td align="center"><a href="/404.html">滑动窗口的最大值</a></td>
-<td align="center"><code>堆</code> <code>双指针</code></td>
-</tr>
-<tr>
-<td align="center">JZ65</td>
-<td align="center"><a href="/404.html">矩阵中的路径</a></td>
-<td align="center"><code>dfs</code></td>
-</tr>
-<tr>
-<td align="center">JZ66</td>
-<td align="center"><a href="/404.html">机器人的运动范围</a></td>
-<td align="center"><code>回溯</code></td>
-</tr>
-<tr>
-<td align="center">JZ67</td>
-<td align="center"><a href="/404.html">剪绳子</a></td>
-<td align="center"><code>数学</code></td>
-</tr>
-</tbody></table>
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/08/04/9-JZ3/" >
+            
+                <span>JZ3：从尾到头打印链表</span>
+        </a>
+        <div class="abstract-content">
+            描述输入一个链表的头节点，按链表从尾到头的顺序返回每个节点的值（用数组返回）。
 
+如输入{1,2,3}的链表如上图，返回一个数组为[3,2,1]。
+0 &...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "剑指Offer">剑指Offer</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Golang">Golang</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Go语言">Go语言</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "链表">链表</a>
+    
+</div>
+            
+        </div>
     </article>
-    <!-- license  -->
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2021/09/06/7-JZ1/" title= "JZ1：二维数组中的查找">
-                    <div class="nextTitle">JZ1：二维数组中的查找</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2021/05/27/5-LexicalAnalyzer/" title= "C++实现词法分析程序">
-                    <div class="prevTitle">C++实现词法分析程序</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
     
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "p5KlOzhAb5PNGyA0Kpv3CkMX-gzGzoHsz",
-        appKey: "O9ffEiE6x6X0dt0nuStUfR9X",
-        placeholder: "",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -873,24 +463,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -978,9 +550,68 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 8
+        Total : 13
         </div>
         <!-- search  -->
         
@@ -996,17 +627,42 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2021/09/06/8-JZ2/" >JZ2：替换空格</a>
+            <span class="archive-post-date">09/28</span><a class="archive-post-title" href= "/2021/09/28/64-JZ58/" >JZ58：对称的二叉树</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2021/09/06/7-JZ1/" >JZ1：二维数组中的查找</a>
+            <span class="archive-post-date">08/23</span><a class="archive-post-title" href= "/2021/08/23/28-JZ22/" >JZ22：从上往下打印二叉树</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2021/09/06/6-JZ0/" >《剑指Offer》的Go语言实现</a>
+            <span class="archive-post-date">08/06</span><a class="archive-post-title" href= "/2021/08/06/11-JZ5/" >JZ5：用两个栈实现队列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span><a class="archive-post-title" href= "/2021/08/05/10-JZ4/" >JZ4：重建二叉树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/04</span><a class="archive-post-title" href= "/2021/08/04/9-JZ3/" >JZ3：从尾到头打印链表</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span><a class="archive-post-title" href= "/2021/08/03/8-JZ2/" >JZ2：替换空格</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/02</span><a class="archive-post-title" href= "/2021/08/02/7-JZ1/" >JZ1：二维数组中的查找</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/01</span><a class="archive-post-title" href= "/2021/08/01/6-JZ0/" >《剑指Offer》的Go语言实现</a>
         </li>
     
     
@@ -1057,11 +713,21 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+        <span class="sidebar-tag-name" data-tags="剑指Offer"><span class="iconfont-archer">&#xe606;</span>剑指Offer</span>
     
         <span class="sidebar-tag-name" data-tags="Golang"><span class="iconfont-archer">&#xe606;</span>Golang</span>
     
         <span class="sidebar-tag-name" data-tags="Go语言"><span class="iconfont-archer">&#xe606;</span>Go语言</span>
+    
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
+    
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
+    
+        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
         <span class="sidebar-tag-name" data-tags="Docker"><span class="iconfont-archer">&#xe606;</span>Docker</span>
     
@@ -1071,17 +737,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="微服务"><span class="iconfont-archer">&#xe606;</span>微服务</span>
     
+        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
+    
         <span class="sidebar-tag-name" data-tags="k8s"><span class="iconfont-archer">&#xe606;</span>k8s</span>
     
         <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
     
         <span class="sidebar-tag-name" data-tags="编译原理"><span class="iconfont-archer">&#xe606;</span>编译原理</span>
     
-        <span class="sidebar-tag-name" data-tags="剑指Offer"><span class="iconfont-archer">&#xe606;</span>剑指Offer</span>
-    
-        <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
-    
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
+    
+        <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1116,15 +782,15 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+        <span class="sidebar-category-name" data-categories="剑指Offer"><span class="iconfont-archer">&#xe60a;</span>剑指Offer</span>
     
         <span class="sidebar-category-name" data-categories="Go语言学习笔记"><span class="iconfont-archer">&#xe60a;</span>Go语言学习笔记</span>
+    
+        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
     
         <span class="sidebar-category-name" data-categories="系统综合实践"><span class="iconfont-archer">&#xe60a;</span>系统综合实践</span>
     
         <span class="sidebar-category-name" data-categories="编译原理"><span class="iconfont-archer">&#xe60a;</span>编译原理</span>
-    
-        <span class="sidebar-category-name" data-categories="剑指Offer"><span class="iconfont-archer">&#xe60a;</span>剑指Offer</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
@@ -1156,8 +822,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->    
      
     </body>
 </html>
