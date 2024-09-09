@@ -28,7 +28,7 @@
 <meta property="og:description" content="描述请实现一个函数，用来判断一棵二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。 示例1输入：&amp;#123;8,6,6,5,7,7,5&amp;#125;返回值：true  示例2输入：&amp;#123;8,6,9,5,7,7,5&amp;#125;返回值：false  解答package main&#x2F;*type TreeNode struct &amp;#123;    Val int    L">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-09-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-25T20:12:25.217Z">
+<meta property="article:modified_time" content="2024-09-09T15:27:24.313Z">
 <meta property="article:author" content="AJiang">
 <meta property="article:tag" content="剑指Offer">
 <meta property="article:tag" content="Golang">
@@ -421,12 +421,23 @@ height:50vh;
 <h1 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入：&#123;<span class="number">8</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">7</span>,<span class="number">5</span>&#125;</span><br><span class="line"></span><br><span class="line">返回值：<span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">type TreeNode struct &#123;</span></span><br><span class="line"><span class="comment">    Val int</span></span><br><span class="line"><span class="comment">    Left *TreeNode</span></span><br><span class="line"><span class="comment">    Right *TreeNode</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isMirror</span><span class="params">( tree1, tree2 *TreeNode )</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> tree1 == <span class="literal">nil</span> || tree2 == <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> tree1 == <span class="literal">nil</span> &amp;&amp; tree2 == <span class="literal">nil</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tree1.Val == tree2.Val &amp;&amp; isMirror(tree1.Left, tree2.Right) &amp;&amp; isMirror(tree1.Right, tree2.Left)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isSymmetrical</span><span class="params">( pRoot *TreeNode )</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> pRoot == <span class="literal">nil</span> &#123; <span class="comment">// 空树</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> isMirror(pRoot.Left, pRoot.Right)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<style>
+p{
+text-indent:2em;
+}
+</style>
     </article>
     <!-- license  -->
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2022/06/15/74-DeployServer/" title= "从零开始部署Apache+PHP+MySQL服务器">
+                    <div class="nextTitle">从零开始部署Apache+PHP+MySQL服务器</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -663,42 +674,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -708,6 +686,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2022/06/15/74-DeployServer/" >从零开始部署Apache+PHP+MySQL服务器</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -800,13 +792,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+    
         <span class="sidebar-tag-name" data-tags="剑指Offer"><span class="iconfont-archer">&#xe606;</span>剑指Offer</span>
     
         <span class="sidebar-tag-name" data-tags="Golang"><span class="iconfont-archer">&#xe606;</span>Golang</span>
     
         <span class="sidebar-tag-name" data-tags="Go语言"><span class="iconfont-archer">&#xe606;</span>Go语言</span>
-    
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
@@ -814,7 +806,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
-        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
     
         <span class="sidebar-tag-name" data-tags="Docker"><span class="iconfont-archer">&#xe606;</span>Docker</span>
     
@@ -824,13 +818,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="微服务"><span class="iconfont-archer">&#xe606;</span>微服务</span>
     
-        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
-    
         <span class="sidebar-tag-name" data-tags="k8s"><span class="iconfont-archer">&#xe606;</span>k8s</span>
     
         <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
     
         <span class="sidebar-tag-name" data-tags="编译原理"><span class="iconfont-archer">&#xe606;</span>编译原理</span>
+    
+        <span class="sidebar-tag-name" data-tags="Apache"><span class="iconfont-archer">&#xe606;</span>Apache</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP"><span class="iconfont-archer">&#xe606;</span>PHP</span>
+    
+        <span class="sidebar-tag-name" data-tags="MySQL"><span class="iconfont-archer">&#xe606;</span>MySQL</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
@@ -869,15 +867,17 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="剑指Offer"><span class="iconfont-archer">&#xe60a;</span>剑指Offer</span>
+        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+    
+        <span class="sidebar-category-name" data-categories="《剑指Offer》的Go语言实现"><span class="iconfont-archer">&#xe60a;</span>《剑指Offer》的Go语言实现</span>
     
         <span class="sidebar-category-name" data-categories="Go语言学习笔记"><span class="iconfont-archer">&#xe60a;</span>Go语言学习笔记</span>
     
-        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
-    
         <span class="sidebar-category-name" data-categories="系统综合实践"><span class="iconfont-archer">&#xe60a;</span>系统综合实践</span>
     
-        <span class="sidebar-category-name" data-categories="编译原理"><span class="iconfont-archer">&#xe60a;</span>编译原理</span>
+        <span class="sidebar-category-name" data-categories="C＋＋学习笔记"><span class="iconfont-archer">&#xe60a;</span>C＋＋学习笔记</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP学习笔记"><span class="iconfont-archer">&#xe60a;</span>PHP学习笔记</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

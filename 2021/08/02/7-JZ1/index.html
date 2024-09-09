@@ -20,15 +20,15 @@
     <meta name="keywords" content="AJiang's Blog,AJiang">
     
     <meta name="description" content="">
-    <meta name="description" content="描述在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 [ [1, 2, 8,  9 ], [2, 4, 9,  12], [4, 7, 10, 13], [6, 8, 11, 15]]  给定 target &#x3D; 7，返回 true。给定 targ">
+    <meta name="description" content="描述在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 [ [1, 2, 8,  9 ], [2, 4, 9,  12], [4, 7, 10, 13], [6, 8, 11, 15]]  给定 target &#x3D; 7，返回 true。  给定 ta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JZ1：二维数组中的查找">
 <meta property="og:url" content="https://ajiang0704.github.io/2021/08/02/7-JZ1/index.html">
 <meta property="og:site_name" content="AJiang&#39;s Blog">
-<meta property="og:description" content="描述在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 [ [1, 2, 8,  9 ], [2, 4, 9,  12], [4, 7, 10, 13], [6, 8, 11, 15]]  给定 target &#x3D; 7，返回 true。给定 targ">
+<meta property="og:description" content="描述在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 [ [1, 2, 8,  9 ], [2, 4, 9,  12], [4, 7, 10, 13], [6, 8, 11, 15]]  给定 target &#x3D; 7，返回 true。  给定 ta">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-08-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-25T22:56:10.970Z">
+<meta property="article:modified_time" content="2024-09-09T15:26:13.385Z">
 <meta property="article:author" content="AJiang">
 <meta property="article:tag" content="剑指Offer">
 <meta property="article:tag" content="Golang">
@@ -418,13 +418,26 @@ height:50vh;
         <h1 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h1><p>在一个二维数组array中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line"> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">8</span>,  <span class="number">9</span> ],</span><br><span class="line"> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>,  <span class="number">12</span>],</span><br><span class="line"> [<span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>],</span><br><span class="line"> [<span class="number">6</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">15</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
-<p>给定 target = 7，返回 true。<br>给定 target = 3，返回 false。<br>0 &lt;= array.length &lt;= 500<br>0 &lt;= array[0].length &lt;= 500</p>
+<p>给定 target = 7，返回 true。</p>
+
+<p>给定 target = 3，返回 false。</p>
+
+<p>0 <= array.length <= 500 </p>
+
+<p>0 <= array[0].length <= 500 </p>
+
 <p>你能给出时间复杂度为O(n + m)的解法吗？（n,m为矩阵的长和宽）</p>
 <h1 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入：<span class="number">7</span>,[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">2</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">12</span>],[<span class="number">4</span>,<span class="number">7</span>,<span class="number">10</span>,<span class="number">13</span>],[<span class="number">6</span>,<span class="number">8</span>,<span class="number">11</span>,<span class="number">15</span>]]</span><br><span class="line"></span><br><span class="line">返回值：<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">说明：存在<span class="number">7</span>，返回<span class="literal">true</span> </span><br></pre></td></tr></table></figure>
 
 <h1 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入：<span class="number">3</span>,[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">2</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">12</span>],[<span class="number">4</span>,<span class="number">7</span>,<span class="number">10</span>,<span class="number">13</span>],[<span class="number">6</span>,<span class="number">8</span>,<span class="number">11</span>,<span class="number">15</span>]]</span><br><span class="line"></span><br><span class="line">返回值：<span class="literal">false</span></span><br><span class="line"></span><br><span class="line">说明：不存在<span class="number">3</span>，返回<span class="literal">false</span> </span><br></pre></td></tr></table></figure>
 
 <h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Find</span><span class="params">(target <span class="keyword">int</span>, array [][]<span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    row := <span class="built_in">len</span>(array) <span class="comment">//数组的行数</span></span><br><span class="line">    col := <span class="built_in">len</span>(array[<span class="number">0</span>]) <span class="comment">//数组的列数</span></span><br><span class="line">    <span class="keyword">for</span> x, y := <span class="number">0</span>, col - <span class="number">1</span>; x &lt; row &amp;&amp; y &gt;= <span class="number">0</span>; &#123; <span class="comment">//从右上角的点开始遍历</span></span><br><span class="line">        <span class="keyword">if</span> array[x][y] &lt; target &#123; <span class="comment">//比它大的点都在它下边</span></span><br><span class="line">            x ++</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> array[x][y] &gt; target &#123; <span class="comment">//比它小的点都在它左边</span></span><br><span class="line">            y --</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> array[x][y] == target &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<style>
+p{
+text-indent:2em;
+}
+</style>
     </article>
     <!-- license  -->
     
@@ -672,42 +685,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -717,6 +697,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2022/06/15/74-DeployServer/" >从零开始部署Apache+PHP+MySQL服务器</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -809,13 +803,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+    
         <span class="sidebar-tag-name" data-tags="剑指Offer"><span class="iconfont-archer">&#xe606;</span>剑指Offer</span>
     
         <span class="sidebar-tag-name" data-tags="Golang"><span class="iconfont-archer">&#xe606;</span>Golang</span>
     
         <span class="sidebar-tag-name" data-tags="Go语言"><span class="iconfont-archer">&#xe606;</span>Go语言</span>
-    
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
@@ -823,7 +817,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
-        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
     
         <span class="sidebar-tag-name" data-tags="Docker"><span class="iconfont-archer">&#xe606;</span>Docker</span>
     
@@ -833,13 +829,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="微服务"><span class="iconfont-archer">&#xe606;</span>微服务</span>
     
-        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
-    
         <span class="sidebar-tag-name" data-tags="k8s"><span class="iconfont-archer">&#xe606;</span>k8s</span>
     
         <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
     
         <span class="sidebar-tag-name" data-tags="编译原理"><span class="iconfont-archer">&#xe606;</span>编译原理</span>
+    
+        <span class="sidebar-tag-name" data-tags="Apache"><span class="iconfont-archer">&#xe606;</span>Apache</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP"><span class="iconfont-archer">&#xe606;</span>PHP</span>
+    
+        <span class="sidebar-tag-name" data-tags="MySQL"><span class="iconfont-archer">&#xe606;</span>MySQL</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
@@ -878,15 +878,17 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="剑指Offer"><span class="iconfont-archer">&#xe60a;</span>剑指Offer</span>
+        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+    
+        <span class="sidebar-category-name" data-categories="《剑指Offer》的Go语言实现"><span class="iconfont-archer">&#xe60a;</span>《剑指Offer》的Go语言实现</span>
     
         <span class="sidebar-category-name" data-categories="Go语言学习笔记"><span class="iconfont-archer">&#xe60a;</span>Go语言学习笔记</span>
     
-        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
-    
         <span class="sidebar-category-name" data-categories="系统综合实践"><span class="iconfont-archer">&#xe60a;</span>系统综合实践</span>
     
-        <span class="sidebar-category-name" data-categories="编译原理"><span class="iconfont-archer">&#xe60a;</span>编译原理</span>
+        <span class="sidebar-category-name" data-categories="C＋＋学习笔记"><span class="iconfont-archer">&#xe60a;</span>C＋＋学习笔记</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP学习笔记"><span class="iconfont-archer">&#xe60a;</span>PHP学习笔记</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

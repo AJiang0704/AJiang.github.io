@@ -20,16 +20,16 @@
     <meta name="keywords" content="AJiang's Blog,AJiang">
     
     <meta name="description" content="">
-    <meta name="description" content="描述给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建树如下图所示：  提示:1.vin.length &#x3D;&#x3D; pre.length2.pre 和 vin 均无重复元素3.vin 出现的元素均出现在 pre 里4.只需要返回根结点，系统会自动输出整颗树做答案">
+    <meta name="description" content="描述给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建树如下图所示：  提示: 1.vin.length &#x3D;&#x3D; pre.length 2.pre 和 vin 均无重复元素 3.vin 出现的元素均出现在 pre 里 4.只需要返回根结点，系统会自动输出整颗">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JZ4：重建二叉树">
 <meta property="og:url" content="https://ajiang0704.github.io/2021/08/05/10-JZ4/index.html">
 <meta property="og:site_name" content="AJiang&#39;s Blog">
-<meta property="og:description" content="描述给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建树如下图所示：  提示:1.vin.length &#x3D;&#x3D; pre.length2.pre 和 vin 均无重复元素3.vin 出现的元素均出现在 pre 里4.只需要返回根结点，系统会自动输出整颗树做答案">
+<meta property="og:description" content="描述给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建树如下图所示：  提示: 1.vin.length &#x3D;&#x3D; pre.length 2.pre 和 vin 均无重复元素 3.vin 出现的元素均出现在 pre 里 4.只需要返回根结点，系统会自动输出整颗">
 <meta property="og:locale">
 <meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20210717/557336_1626504921458/776B0E5E0FAD11A6F15004B29DA5E628">
 <meta property="article:published_time" content="2021-08-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-25T21:09:57.890Z">
+<meta property="article:modified_time" content="2024-09-09T15:26:53.180Z">
 <meta property="article:author" content="AJiang">
 <meta property="article:tag" content="剑指Offer">
 <meta property="article:tag" content="Golang">
@@ -425,7 +425,12 @@ height:50vh;
     <article class="article-entry">
         <h1 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h1><p>给定节点数为 n 二叉树的前序遍历和中序遍历结果，请重建出该二叉树并返回它的头结点。<br>例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建树如下图所示：</p>
 <p><img src="https://uploadfiles.nowcoder.com/images/20210717/557336_1626504921458/776B0E5E0FAD11A6F15004B29DA5E628" alt="二叉树"></p>
-<p>提示:<br>1.vin.length == pre.length<br>2.pre 和 vin 均无重复元素<br>3.vin 出现的元素均出现在 pre 里<br>4.只需要返回根结点，系统会自动输出整颗树做答案对比</p>
+<p>提示:</p>
+<p>1.vin.length == pre.length</p>
+<p>2.pre 和 vin 均无重复元素</p>
+<p>3.vin 出现的元素均出现在 pre 里</p>
+<p>4.只需要返回根结点，系统会自动输出整颗树做答案对比</p>
+
 <p>数据范围：n &lt;= 2000，节点的值 -10000 &lt;= val &lt;= 10000</p>
 <p>要求：空间复杂度O(n) ，时间复杂度O(n)</p>
 <h1 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">输入：[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>],[<span class="number">4</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">返回值：&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,#,<span class="number">5</span>,<span class="number">6</span>,#,<span class="number">7</span>,#,#,<span class="number">8</span>&#125;</span><br><span class="line"></span><br><span class="line">说明：返回根节点，系统会输出整颗二叉树对比结果，重建结果如题面图示</span><br></pre></td></tr></table></figure>
@@ -438,6 +443,12 @@ height:50vh;
 
 
 <h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">type TreeNode struct &#123;</span></span><br><span class="line"><span class="comment">    Val int</span></span><br><span class="line"><span class="comment">    Left *TreeNode</span></span><br><span class="line"><span class="comment">    Right *TreeNode</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reConstructBinaryTree</span><span class="params">(pre []<span class="keyword">int</span>, vin []<span class="keyword">int</span>)</span> *<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> i <span class="keyword">int</span></span><br><span class="line">    length := <span class="built_in">len</span>(pre) <span class="comment">//前序遍历和中序遍历的长度都是相同的</span></span><br><span class="line">    <span class="keyword">if</span> length == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    root := &amp;TreeNode&#123;pre[<span class="number">0</span>], <span class="literal">nil</span>, <span class="literal">nil</span>&#125; <span class="comment">//根据前序遍历的第一个节点创建根节点</span></span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">0</span>; i &lt; length; i ++ &#123;</span><br><span class="line">        <span class="keyword">if</span> vin[i] == pre[<span class="number">0</span>] &#123; <span class="comment">//找出在中序遍历中根节点的位置</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    root.Left = reConstructBinaryTree(pre[<span class="number">1</span>:<span class="built_in">len</span>(vin[:i])+<span class="number">1</span>], vin[:i]) <span class="comment">//左子树</span></span><br><span class="line">    root.Right = reConstructBinaryTree(pre[<span class="built_in">len</span>(vin[:i])+<span class="number">1</span>:], vin[i+<span class="number">1</span>:]) <span class="comment">//右子树</span></span><br><span class="line">    <span class="keyword">return</span> root</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<style>
+p{
+text-indent:2em;
+}
+</style>
     </article>
     <!-- license  -->
     
@@ -685,42 +696,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -730,6 +708,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span><a class="archive-post-title" href= "/2022/06/15/74-DeployServer/" >从零开始部署Apache+PHP+MySQL服务器</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
@@ -822,13 +814,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+    
         <span class="sidebar-tag-name" data-tags="剑指Offer"><span class="iconfont-archer">&#xe606;</span>剑指Offer</span>
     
         <span class="sidebar-tag-name" data-tags="Golang"><span class="iconfont-archer">&#xe606;</span>Golang</span>
     
         <span class="sidebar-tag-name" data-tags="Go语言"><span class="iconfont-archer">&#xe606;</span>Go语言</span>
-    
-        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
@@ -836,7 +828,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="dfs"><span class="iconfont-archer">&#xe606;</span>dfs</span>
     
-        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+        <span class="sidebar-tag-name" data-tags="栈"><span class="iconfont-archer">&#xe606;</span>栈</span>
+    
+        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
     
         <span class="sidebar-tag-name" data-tags="Docker"><span class="iconfont-archer">&#xe606;</span>Docker</span>
     
@@ -846,13 +840,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="微服务"><span class="iconfont-archer">&#xe606;</span>微服务</span>
     
-        <span class="sidebar-tag-name" data-tags="队列"><span class="iconfont-archer">&#xe606;</span>队列</span>
-    
         <span class="sidebar-tag-name" data-tags="k8s"><span class="iconfont-archer">&#xe606;</span>k8s</span>
     
         <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
     
         <span class="sidebar-tag-name" data-tags="编译原理"><span class="iconfont-archer">&#xe606;</span>编译原理</span>
+    
+        <span class="sidebar-tag-name" data-tags="Apache"><span class="iconfont-archer">&#xe606;</span>Apache</span>
+    
+        <span class="sidebar-tag-name" data-tags="PHP"><span class="iconfont-archer">&#xe606;</span>PHP</span>
+    
+        <span class="sidebar-tag-name" data-tags="MySQL"><span class="iconfont-archer">&#xe606;</span>MySQL</span>
     
         <span class="sidebar-tag-name" data-tags="字符串"><span class="iconfont-archer">&#xe606;</span>字符串</span>
     
@@ -891,15 +889,17 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="剑指Offer"><span class="iconfont-archer">&#xe60a;</span>剑指Offer</span>
+        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+    
+        <span class="sidebar-category-name" data-categories="《剑指Offer》的Go语言实现"><span class="iconfont-archer">&#xe60a;</span>《剑指Offer》的Go语言实现</span>
     
         <span class="sidebar-category-name" data-categories="Go语言学习笔记"><span class="iconfont-archer">&#xe60a;</span>Go语言学习笔记</span>
     
-        <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
-    
         <span class="sidebar-category-name" data-categories="系统综合实践"><span class="iconfont-archer">&#xe60a;</span>系统综合实践</span>
     
-        <span class="sidebar-category-name" data-categories="编译原理"><span class="iconfont-archer">&#xe60a;</span>编译原理</span>
+        <span class="sidebar-category-name" data-categories="C＋＋学习笔记"><span class="iconfont-archer">&#xe60a;</span>C＋＋学习笔记</span>
+    
+        <span class="sidebar-category-name" data-categories="PHP学习笔记"><span class="iconfont-archer">&#xe60a;</span>PHP学习笔记</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
